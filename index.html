@@ -4,7 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Skill Bridge</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -44,16 +45,50 @@
     <span class="cursor">|</span>
 </h1>    <p class="hero-sub">We build digital solutions, guide college projects, and offer industry internships — everything you need to go from student to professional.</p>
     <div class="hero-actions">
-      <a class="btn-primary" href="Service.html">Explore Services</a>
+      <a class="btn-primary" href="service.html">Explore Services</a>
       <a class="btn-outline" href="internship.html">Join Internship</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Projects Delivered</div></div>
-      <div class="stat"><div class="stat-num">4</div><div class="stat-label">Domain Tracks</div></div>
-      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Student-Focused</div></div>
+      <div class="stat"><div class="stat-num"><span class="counter">50</span>+</div><div class="stat-label">Projects Delivered</div></div>
+      <div class="stat"><div class="stat-num"><span class="counter">4</span></div><div class="stat-label">Domain Tracks</div></div>
+      <div class="stat"><div class="stat-num"><span class="counter">100</span>%</div><div class="stat-label">Student-Focused</div></div>
     </div>
   </div>
+  <div class="scroll-cue"><span>Scroll</span><i class="fas fa-chevron-down"></i></div>
 </section>
+
+<!-- TECH MARQUEE -->
+<div class="tech-marquee">
+  <div class="marquee-label">Technologies We Teach &amp; Build With</div>
+  <div class="marquee-viewport">
+    <div class="marquee-inner">
+      <div class="marquee-track">
+        <div class="marquee-item"><i class="fab fa-react"></i>React.js</div>
+        <div class="marquee-item"><i class="fab fa-node-js"></i>Node.js</div>
+        <div class="marquee-item"><i class="fab fa-python"></i>Python</div>
+        <div class="marquee-item"><i class="fab fa-figma"></i>Figma</div>
+        <div class="marquee-item"><i class="fab fa-java"></i>Java</div>
+        <div class="marquee-item"><i class="fas fa-microchip"></i>ESP32 / Arduino</div>
+        <div class="marquee-item"><i class="fas fa-cloud"></i>AWS IoT</div>
+        <div class="marquee-item"><i class="fas fa-satellite-dish"></i>PCB Design</div>
+        <div class="marquee-item"><i class="fas fa-wave-square"></i>Verilog HDL</div>
+        <div class="marquee-item"><i class="fas fa-database"></i>MongoDB</div>
+      </div>
+      <div class="marquee-track" aria-hidden="true">
+        <div class="marquee-item"><i class="fab fa-react"></i>React.js</div>
+        <div class="marquee-item"><i class="fab fa-node-js"></i>Node.js</div>
+        <div class="marquee-item"><i class="fab fa-python"></i>Python</div>
+        <div class="marquee-item"><i class="fab fa-figma"></i>Figma</div>
+        <div class="marquee-item"><i class="fab fa-java"></i>Java</div>
+        <div class="marquee-item"><i class="fas fa-microchip"></i>ESP32 / Arduino</div>
+        <div class="marquee-item"><i class="fas fa-cloud"></i>AWS IoT</div>
+        <div class="marquee-item"><i class="fas fa-satellite-dish"></i>PCB Design</div>
+        <div class="marquee-item"><i class="fas fa-wave-square"></i>Verilog HDL</div>
+        <div class="marquee-item"><i class="fas fa-database"></i>MongoDB</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- OVERVIEW -->
 <section id="overview">
@@ -99,37 +134,77 @@
   <div class="section-label">Why Skill Bridge</div>
   <h2 class="section-title">Built Different. For Students, By Practitioners.</h2>
   <p class="section-sub">We aren't just another training program. We bridge the gap between what college teaches and what industry demands.</p>
-  <div class="why-grid">
-    <div class="why-points">
-      <div class="why-point"><div class="why-icon">🎯</div><div><h4>Custom Solutions</h4><p>Every project, website, or internship is built around your unique needs — no copy-paste work here.</p></div></div>
-      <div class="why-point"><div class="why-icon">⏱️</div><div><h4>On-Time Delivery</h4><p>Deadlines matter. We plan well and deliver on time, every time — your submission window is sacred.</p></div></div>
-      <div class="why-point"><div class="why-icon">✅</div><div><h4>Quality You Can Present</h4><p>Clean code, documented work, and polished output — ready for your panel, your portfolio, or your client.</p></div></div>
-      <div class="why-point"><div class="why-icon">🤝</div><div><h4>Ongoing Support</h4><p>We're with you from start to finish — and beyond. Questions after delivery? We're still here.</p></div></div>
-      <div class="why-point"><div class="why-icon">🏫</div><div><h4>All Colleges Welcome</h4><p>Open to students from any college, department, or year. No gatekeeping — just good work.</p></div></div>
+
+  <div class="why-metrics-row">
+    <div class="why-metric">
+      <div class="why-metric-num"><span class="counter">92</span>%</div>
+      <div class="why-metric-label">Industry-ready skill proficiency</div>
     </div>
-    <div class="why-visual">
-      <h3 style="color:#fff; font-family:'Syne',sans-serif; font-size:18px; margin-bottom:24px;">What Students Walk Away With</h3>
-      <div class="metric">
-        <div class="metric-label">Industry-Ready Skills</div>
-        <div class="metric-bar-bg"><div class="metric-bar" style="width:92%"></div></div>
-        <div class="metric-val">92% proficiency after program</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">Project Completion Rate</div>
-        <div class="metric-bar-bg"><div class="metric-bar" style="width:98%"></div></div>
-        <div class="metric-val">98% projects submitted on time</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">Student Satisfaction</div>
-        <div class="metric-bar-bg"><div class="metric-bar" style="width:96%"></div></div>
-        <div class="metric-val">96% would recommend us</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">Hands-On Learning</div>
-        <div class="metric-bar-bg"><div class="metric-bar" style="width:100%"></div></div>
-        <div class="metric-val">100% project-based curriculum</div>
-      </div>
+    <div class="why-metric">
+      <div class="why-metric-num"><span class="counter">98</span>%</div>
+      <div class="why-metric-label">Projects submitted on time</div>
     </div>
+    <div class="why-metric">
+      <div class="why-metric-num"><span class="counter">96</span>%</div>
+      <div class="why-metric-label">Would recommend us</div>
+    </div>
+    <div class="why-metric">
+      <div class="why-metric-num"><span class="counter">100</span>%</div>
+      <div class="why-metric-label">Project-based curriculum</div>
+    </div>
+  </div>
+
+  <div class="why-reasons-grid">
+    <div class="why-reason-card">
+      <div class="why-reason-icon"><i class="fas fa-bullseye"></i></div>
+      <h4>Custom Solutions</h4>
+      <p>Every project, website, or internship is built around your unique needs — no copy-paste work here.</p>
+    </div>
+    <div class="why-reason-card">
+      <div class="why-reason-icon"><i class="fas fa-stopwatch"></i></div>
+      <h4>On-Time Delivery</h4>
+      <p>Deadlines matter. We plan well and deliver on time, every time — your submission window is sacred.</p>
+    </div>
+    <div class="why-reason-card">
+      <div class="why-reason-icon"><i class="fas fa-circle-check"></i></div>
+      <h4>Quality You Can Present</h4>
+      <p>Clean code, documented work, and polished output — ready for your panel, your portfolio, or your client.</p>
+    </div>
+    <div class="why-reason-card">
+      <div class="why-reason-icon"><i class="fas fa-handshake"></i></div>
+      <h4>Ongoing Support</h4>
+      <p>We're with you from start to finish — and beyond. Questions after delivery? We're still here.</p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-label">Common Questions</div>
+  <h2 class="section-title">Got Questions? We've Got Answers.</h2>
+  <p class="section-sub">A few things students usually ask before joining. Reach out if yours isn't covered here.</p>
+  <div class="faq-list">
+    <details class="faq-item" open>
+      <summary>Who can join the internship program?<span class="faq-icon"><i class="fas fa-plus"></i></span></summary>
+      <p>Anyone — any college, any department, any year. There's no gatekeeping; we care about interest and effort, not your CGPA.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What do I actually walk away with?<span class="faq-icon"><i class="fas fa-plus"></i></span></summary>
+      <p>A recognized internship certificate, a portfolio-worthy capstone project, and hands-on skills in your chosen domain — guided by mentors at every step.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do you help with final-year college projects too?<span class="faq-icon"><i class="fas fa-plus"></i></span></summary>
+      <p>Yes — separate from internships, we guide students through idea selection, development, documentation, and viva prep across software, hardware, IoT, and design domains.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How do I get started?<span class="faq-icon"><i class="fas fa-plus"></i></span></summary>
+      <p>Head to the Contact page or DM us on Instagram to pick your domain. We'll walk you through onboarding, batch timing, and what to expect from there.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is remote participation possible, or is this in-person only?<span class="faq-icon"><i class="fas fa-plus"></i></span></summary>
+      <p>Reach out on the Contact page for current batch format and availability — we're happy to walk you through what fits your situation.</p>
+    </details>
   </div>
 </section>
 
@@ -138,7 +213,7 @@
   <h2>Ready to Build Your Future?</h2>
   <p>Whether you need a website, project support, or want to join an internship — we've got you covered.</p>
   <div class="cta-actions">
-    <a class="btn-white" href="Service.html">Explore Services</a>
+    <a class="btn-white" href="service.html">Explore Services</a>
     <a class="btn-trans" href="internship.html">Join Internship Program</a>
   </div>
 </section>
@@ -153,8 +228,8 @@
       <p>By Banumathi Industries. Bridging classroom learning and industry excellence through real skills, real projects, and real guidance.</p>
       <p style="margin-top:10px; font-size:12px; color:rgba(255,255,255,0.25);"><i class="fas fa-microchip"></i> Technology. Learning. Innovation.</p>
     </div>
-    <div class="footer-col"><h4>Services</h4><a href="Service.html">Website Development</a><a href="Service.html">UI/UX Design</a><a href="Service.html">IoT Solutions</a><a href="Service.html">PCB Design</a><a href="Service.html">Software Dev</a></div>
-    <div class="footer-col"><h4>Students</h4><a href="Internship.html">Internships </a><a href="Internship.html">Internship Program</a><a href="Internship.html">Software Domains</a><a href="Internship.html">Hardware Domains</a><a href="#process">Our Process</a></div>
+    <div class="footer-col"><h4>Services</h4><a href="service.html">Website Development</a><a href="service.html">UI/UX Design</a><a href="service.html">IoT Solutions</a><a href="service.html">PCB Design</a><a href="service.html">Software Dev</a></div>
+    <div class="footer-col"><h4>Students</h4><a href="internship.html">Internships </a><a href="internship.html">Internship Program</a><a href="internship.html">Software Domains</a><a href="internship.html">Hardware Domains</a><a href="internship.html#process">Our Process</a><a href="#faq">FAQ</a></div>
     <div class="footer-col"><h4>Connect</h4><a href="contact.html"><i class="fas fa-envelope" style="margin-right:6px;"></i> Email</a><a href="contact.html"><i class="fas fa-phone-alt" style="margin-right:6px;"></i> Phone</a><a href="contact.html"><i class="fab fa-instagram" style="margin-right:6px;"></i> Instagram</a><a href="contact.html"><i class="fab fa-linkedin" style="margin-right:6px;"></i> LinkedIn</a></div>
   </div>
   <div class="footer-bottom">
