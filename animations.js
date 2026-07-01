@@ -144,7 +144,7 @@ gsap.to(".hero-logo-img",{
 // Reveal Sections
 // -----------------------------
 
-gsap.utils.toArray("section").forEach(section=>{
+gsap.utils.toArray("section:not(.why-section)").forEach(section=>{
 
     gsap.from(section,{
 
@@ -358,8 +358,9 @@ if (document.querySelector("#why")) {
 
         scrollTrigger: {
             trigger: "#why",
-            start: "top 70%",
-            toggleActions: "play none none none"
+            start: "top 85%",
+            toggleActions: "play none none none",
+            once: true
         }
 
     });
@@ -394,132 +395,77 @@ if (document.querySelector("#why")) {
 
     }, "-=0.4");
 
-    // Left Points
-    whyTimeline.from("#why .why-point", {
+    // Metrics row
+    whyTimeline.from("#why .why-metric", {
 
         opacity: 0,
-        x: -50,
+        y: 30,
         duration: 0.6,
-        stagger: 0.12,
+        stagger: 0.1,
         ease: "power2.out"
 
     }, "-=0.2");
 
-    // Right Card
-    whyTimeline.from("#why .why-visual", {
+    // Reason cards
+    whyTimeline.from("#why .why-reason-card", {
 
         opacity: 0,
-        x: 80,
-        duration: 0.8,
-        ease: "power3.out"
+        y: 40,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "power2.out"
 
-    }, "-=0.8");
+    }, "-=0.3");
+
+    // Safety net: if for any reason the ScrollTrigger above never
+    // fires (mistimed trigger position, page loaded mid-scroll,
+    // anchor-jump landing past the trigger point, etc.) force the
+    // content visible after a short delay so it can never get stuck
+    // permanently blank.
+    setTimeout(() => {
+
+        const whyEls = document.querySelectorAll(
+            "#why .section-label, #why .section-title, #why .section-sub, #why .why-metric, #why .why-reason-card"
+        );
+
+        whyEls.forEach(el => {
+
+            if (getComputedStyle(el).opacity === "0") {
+
+                gsap.to(el, { opacity: 1, y: 0, duration: 0.4 });
+
+            }
+
+        });
+
+    }, 2500);
 
 }
-
-/* =====================================================
-   Progress Bars
-===================================================== */
-
-document.querySelectorAll("#why .metric-bar").forEach(bar => {
-
-    const finalWidth = bar.style.width;
-
-    gsap.set(bar, {
-        width: "0%"
-    });
-
-    ScrollTrigger.create({
-
-        trigger: bar,
-
-        start: "top 85%",
-
-        once: true,
-
-        onEnter: () => {
-
-            gsap.to(bar, {
-
-                width: finalWidth,
-
-                duration: 1.6,
-
-                ease: "power2.out"
-
-            });
-
-        }
-
-    });
-
-});
 
 /* =====================================================
    Icon Hover
 ===================================================== */
 
-document.querySelectorAll("#why .why-icon").forEach(icon => {
+/* Hover motion for .why-reason-icon is handled in CSS
+   (.why-reason-card:hover .why-reason-icon) to avoid
+   double-driving transform with GSAP. */
 
-    icon.addEventListener("mouseenter", () => {
+/* Card hover motion for .why-reason-card and .why-metric is
+   handled in CSS to keep it consistent with the rest of the
+   site's card components. */
 
-        gsap.to(icon, {
+/* -----------------------------
+   Recalculate ScrollTrigger positions once everything
+   (fonts, images, animated counters) has actually finished
+   loading — prevents mistimed / stuck-invisible sections.
+------------------------------ */
 
-            rotation: -10,
-            scale: 1.18,
-            duration: 0.25,
-            ease: "back.out(2)"
+window.addEventListener("load", () => {
 
-        });
-
-    });
-
-    icon.addEventListener("mouseleave", () => {
-
-        gsap.to(icon, {
-
-            rotation: 0,
-            scale: 1,
-            duration: 0.25
-
-        });
-
-    });
+    ScrollTrigger.refresh();
 
 });
 
-/* =====================================================
-   Right Card Hover
-===================================================== */
-
-const whyCard = document.querySelector("#why .why-visual");
-
-if (whyCard) {
-
-    whyCard.addEventListener("mouseenter", () => {
-
-        gsap.to(whyCard, {
-
-            y: -8,
-            duration: 0.35,
-            ease: "power2.out"
-
-        });
-
-    });
-
-    whyCard.addEventListener("mouseleave", () => {
-
-        gsap.to(whyCard, {
-
-            y: 0,
-            duration: 0.35
-
-        });
-
-    });
-
-}
 /* ===========================
 TYPEWRITER EFFECT
 =========================== */
