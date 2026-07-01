@@ -174,7 +174,7 @@ gsap.utils.toArray("section:not(.why-section)").forEach(section=>{
 // =========================================
 
 const cards = document.querySelectorAll(
-'[class$="card"], [class*="card"]'
+'[class$="card"]:not(.why-reason-card), [class*="card"]:not(.why-reason-card)'
 );
 
 cards.forEach((card,index)=>{
